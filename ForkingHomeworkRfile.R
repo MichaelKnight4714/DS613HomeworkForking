@@ -12,4 +12,4 @@ diamonds%>%
   slice(1:20)
 
 diamonds <- as.data.table(diamonds)
-diamonds <- diamonds[ , .(carat,cut, price)][cut == "Premium"][price > 7000& price < 10000][order(-carat)]
+diamonds <- diamonds[ , .(carat,cut, price)][cut == "Premium"][price > 7000& price < 10000][order(-carat)][1:20]
